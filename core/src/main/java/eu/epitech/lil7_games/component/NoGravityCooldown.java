@@ -8,8 +8,8 @@ public class NoGravityCooldown implements Component {
     public static final ComponentMapper<NoGravityCooldown> MAPPER = ComponentMapper.getFor(NoGravityCooldown.class);
 
     private float remainingSeconds;
-
-    public NoGravityCooldown() { this(3f); }
+    // Default cooldown after anti-gravity ends is 1.5 seconds
+    public NoGravityCooldown() { this(1.5f); }
     public NoGravityCooldown(float seconds) { this.remainingSeconds = Math.max(0f, seconds); }
 
     public float getRemainingSeconds() { return remainingSeconds; }

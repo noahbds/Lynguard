@@ -96,7 +96,10 @@ public class PlayerSystem extends IteratingSystem {
         if (noGravity != null) {
             noGravity.update(deltaTime);
             if (noGravity.getRemainingSeconds() <= 0f) {
+                // When the anti-gravity effect ends we remove the component and start the cooldown
                 entity.remove(NoGravity.class);
+                // start cooldown after effect end (1.5s)
+                entity.add(new eu.epitech.lil7_games.component.NoGravityCooldown(1.5f));
                 noGravity = null;
             }
         }

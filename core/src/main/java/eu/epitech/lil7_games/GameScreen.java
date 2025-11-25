@@ -789,12 +789,14 @@ public class GameScreen extends ScreenAdapter {
             eu.epitech.lil7_games.component.NoGravityCooldown cooldown = eu.epitech.lil7_games.component.NoGravityCooldown.MAPPER.get(playerEntity);
             if (NoGravity.MAPPER.get(playerEntity) == null) {
                 if (cooldown == null || cooldown.getRemainingSeconds() <= 0f) {
-                    playerEntity.add(new NoGravity());
-                    playerEntity.add(new eu.epitech.lil7_games.component.NoGravityCooldown(1.5f));
+                        playerEntity.add(new NoGravity());
+                        // cooldown will start when the NoGravity effect ends (handled in PlayerSystem)
                 } else {
                 }
             } else {
+                // if player cancels the anti-gravity early, remove effect and start cooldown
                 playerEntity.remove(NoGravity.class);
+                playerEntity.add(new eu.epitech.lil7_games.component.NoGravityCooldown(1.5f));
             }
         }
     this.engine.update(delta);
