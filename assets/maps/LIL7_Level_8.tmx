@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="42" height="20" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" source="backgrounds.tsx"/>
+ <tileset firstgid="5" source="Tiles_Legacy_Fantasy.tsx"/>
+ <tileset firstgid="630" source="grass_textures_5b14s.tsx"/>
+ <tileset firstgid="650" source="TX Village Props.tsx"/>
+ <layer id="2" name="Ciel tu m'avais pas dit" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzrEJAAAIBLHH1V3cHQStcnB9EknSpq7fOTk5OTk5Oe+dA//NrpE=
+  </data>
+ </layer>
+ <layer id="1" name="nuaj" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzDENAAAIA7Al+PfMNQkkHK2AJgAAALfm+VcLECAABw==
+  </data>
+ </layer>
+ <layer id="7" name="Background3" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztkkkOwjAUQ83UXKsUyrlCGc7FfC5e1E0VKYmyQGXxLb2VY//KqmQymUwmk8k0j56N/APucIMPvOEFsVfTy3uRE/lwQ/SJ3qKX8ldOfgkLEDSwgTXEXtUATiIn8uGG6BO9ZS/h77jfwRZaOEAPe4i9UJHbe7o570VO3XhD9Kl3ZS/ln7g/wBE8XOECZ4i90JHde7I570VOw3hD9Oniyl7Kr1Vu79ZV/hs/VG5v/0ffOZe+DVZhLQ==
+  </data>
+ </layer>
+ <layer id="6" name="Background2" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0UcOwjAQhWGvnZuE9NyKDrkVvdyKXi7Av4gEm4zNAkVC86RPXkwkz3OM0Wg0Go1Go2knoTWmgwgxEqTIkKNAadve0pguO/TQxwBDjDDGBFMrd/mmp+sNpPmMc44FllhhjQ222NnmLr49q/pbaeaaHziPOOGMC6644Y6Hbe7i23Nf3ynNKsc8DPhviBAjQYoMOYpA7uLT8/lx5y8jdfHpWQbvff89L0TUWSc=
+  </data>
+ </layer>
+ <layer id="5" name="Background" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0kduwlAYhVGP7Z1A6KwqvS3grieNtFWRXhaQg8jcyBJi8q70Df3r6chVVVZWVlZWVla2m/XrqtrTQEONNNZEU800rze71avb73XdgW8PdaRjnehUZzrXhS43vL9ft9/rumvf3uhWd1roXg961NPaM1zDI1zCJ5zCK9zCLxxzVbff67oX377qTe/60Ke+9K2ftWe4hke4hE84hVe4hV9Wt5Z1+72u6zf+Jw001EhjTTTVTM/ewTU8wiV8wim8wi38wjG9pv3eNvfrDVzDI1zCJ5zCK9zCLxyz/Hfd1eaN/1M8wiV8wim8wi38wnHlubV3/gEfdmQl
+  </data>
+ </layer>
+ <layer id="3" name="Ground" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztyrENACAMA8FsAmwBbBHYfxdcU6Vz8ye95MIRAAAAAH5DNdWNu/Ldaqpl3JXvVamOcVe+D4JqHA8=
+  </data>
+ </layer>
+ <layer id="4" name="Foreground" width="42" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0rkNg0AQRuERiI0wRxd2L5xd2L1w9uWzC+iCJwGRIwK0G8wvfdEkLxgRnU6n0+l0RxYGIhdEiJEgDWxX/S+jKUeBEhVqBzsbmlp06DFgdLDzSdMLb3zwxW/rnDyR2bPbty80/CcixEiQmvV29UVuvt2+fRlNOQqUqFBvnXcaH450NjS16NBjwGhsV+nO3AJF0RPJ
+  </data>
+ </layer>
+ <layer id="8" name="PLAYER_SPAWN" width="42" height="20">
+  <properties>
+   <property name="player_spawn_level_8" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwSgYBaOAesASiK0G2hFEgCAgDh5oR4yCQQcAoMIBGQ==
+  </data>
+ </layer>
+ <layer id="9" name="RETURN_LEVEL" width="42" height="20">
+  <properties>
+   <property name="player_return_level_5" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztw0EJACAMAMDVcjG0f5ftsQqC4B1cBAAA3LV6zpftfiZ/KsjNAaY=
+  </data>
+ </layer>
+ <layer id="10" name="LEVEL_TRANSITION" width="42" height="20">
+  <properties>
+   <property name="level_transition_level9" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwzENAAAIA7D5F4Q+ngngJm3SBACAq2ngpwWSwwFt
+  </data>
+ </layer>
+</map>

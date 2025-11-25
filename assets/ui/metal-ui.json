@@ -1,0 +1,650 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	font: {
+		file: font-export.fnt
+	}
+}
+com.badlogic.gdx.graphics.Color: {
+	black: {
+		r: 0
+		g: 0
+		b: 0
+		a: 1
+	}
+	white: {
+		r: 1
+		g: 1
+		b: 1
+		a: 1
+	}
+	text-primary: {
+		r: 0.92
+		g: 0.95
+		b: 0.98
+		a: 1
+	}
+	text-muted: {
+		r: 0.68
+		g: 0.72
+		b: 0.78
+		a: 1
+	}
+	accent: {
+		r: 0.93
+		g: 0.7
+		b: 0.32
+		a: 1
+	}
+	accent-strong: {
+		r: 0.96
+		g: 0.54
+		b: 0.18
+		a: 1
+	}
+	danger: {
+		r: 0.89
+		g: 0.23
+		b: 0.24
+		a: 1
+	}
+	metal-dark: {
+		r: 0.07
+		g: 0.08
+		b: 0.1
+		a: 1
+	}
+	metal-medium: {
+		r: 0.16
+		g: 0.18
+		b: 0.22
+		a: 1
+	}
+	metal-light: {
+		r: 0.23
+		g: 0.26
+		b: 0.32
+		a: 1
+	}
+	overlay-dark: {
+		r: 0
+		g: 0
+		b: 0
+		a: 0.75
+	}
+	divider: {
+		r: 1
+		g: 1
+		b: 1
+		a: 0.12
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+	panel-dark: {
+		name: window
+		color: {
+			r: 0.07
+			g: 0.08
+			b: 0.1
+			a: 0.98
+		}
+	}
+	panel-medium: {
+		name: window
+		color: {
+			r: 0.11
+			g: 0.13
+			b: 0.17
+			a: 0.98
+		}
+	}
+	panel-light: {
+		name: window
+		color: {
+			r: 0.19
+			g: 0.21
+			b: 0.26
+			a: 0.98
+		}
+	}
+	panel-overlay: {
+		name: white
+		color: {
+			r: 0
+			g: 0
+			b: 0
+			a: 0.65
+		}
+	}
+	divider-line: {
+		name: white
+		color: {
+			r: 1
+			g: 1
+			b: 1
+			a: 0.12
+		}
+	}
+	button-primary-up: {
+		name: button
+		color: {
+			r: 0.93
+			g: 0.7
+			b: 0.32
+			a: 1
+		}
+	}
+	button-primary-over: {
+		name: button-over
+		color: {
+			r: 1
+			g: 0.8
+			b: 0.45
+			a: 1
+		}
+	}
+	button-primary-down: {
+		name: button-pressed
+		color: {
+			r: 0.84
+			g: 0.54
+			b: 0.15
+			a: 1
+		}
+	}
+	button-secondary-up: {
+		name: button
+		color: {
+			r: 0.26
+			g: 0.29
+			b: 0.34
+			a: 1
+		}
+	}
+	button-secondary-over: {
+		name: button-over
+		color: {
+			r: 0.32
+			g: 0.35
+			b: 0.4
+			a: 1
+		}
+	}
+	button-secondary-down: {
+		name: button-pressed
+		color: {
+			r: 0.22
+			g: 0.25
+			b: 0.3
+			a: 1
+		}
+	}
+	button-ghost-up: {
+		name: button
+		color: {
+			r: 1
+			g: 1
+			b: 1
+			a: 0.3
+		}
+	}
+	button-ghost-over: {
+		name: button-over
+		color: {
+			r: 1
+			g: 1
+			b: 1
+			a: 0.4
+		}
+	}
+	button-ghost-down: {
+		name: button-pressed
+		color: {
+			r: 1
+			g: 1
+			b: 1
+			a: 0.45
+		}
+	}
+	button-danger-up: {
+		name: button
+		color: {
+			r: 0.89
+			g: 0.23
+			b: 0.24
+			a: 1
+		}
+	}
+	button-danger-over: {
+		name: button-over
+		color: {
+			r: 0.97
+			g: 0.36
+			b: 0.32
+			a: 1
+		}
+	}
+	button-danger-down: {
+		name: button-pressed
+		color: {
+			r: 0.74
+			g: 0.17
+			b: 0.19
+			a: 1
+		}
+	}
+	slider-track: {
+		name: slider-h
+		color: {
+			r: 0.18
+			g: 0.2
+			b: 0.25
+			a: 1
+		}
+	}
+	slider-track-before: {
+		name: slider-h-before-knob
+		color: {
+			r: 0.93
+			g: 0.7
+			b: 0.32
+			a: 1
+		}
+	}
+	slider-track-sfx: {
+		name: slider-h
+		color: {
+			r: 0.16
+			g: 0.22
+			b: 0.32
+			a: 1
+		}
+	}
+	slider-track-before-sfx: {
+		name: slider-h-before-knob
+		color: {
+			r: 0.45
+			g: 0.67
+			b: 0.96
+			a: 1
+		}
+	}
+	slider-knob: {
+		name: slider-h-knob
+		color: {
+			r: 0.96
+			g: 0.54
+			b: 0.18
+			a: 1
+		}
+	}
+	slider-knob-over: {
+		name: slider-h-knob
+		color: {
+			r: 1
+			g: 0.68
+			b: 0.28
+			a: 1
+		}
+	}
+	slider-knob-down: {
+		name: slider-h-knob
+		color: {
+			r: 0.82
+			g: 0.42
+			b: 0.12
+			a: 1
+		}
+	}
+	slider-knob-sfx: {
+		name: slider-h-knob
+		color: {
+			r: 0.45
+			g: 0.67
+			b: 0.96
+			a: 1
+		}
+	}
+	input-background: {
+		name: rect
+		color: {
+			r: 0.12
+			g: 0.14
+			b: 0.18
+			a: 1
+		}
+	}
+	input-focus: {
+		name: rect
+		color: {
+			r: 0.16
+			g: 0.2
+			b: 0.26
+			a: 1
+		}
+	}
+	list-background: {
+		name: list
+		color: {
+			r: 0.09
+			g: 0.1
+			b: 0.12
+			a: 0.95
+		}
+	}
+	selection-strong: {
+		name: selection
+		color: {
+			r: 0.93
+			g: 0.7
+			b: 0.32
+			a: 0.45
+		}
+	}
+	selection-muted: {
+		name: selection
+		color: {
+			r: 0.4
+			g: 0.45
+			b: 0.52
+			a: 0.4
+		}
+	}
+	badge: {
+		name: white
+		color: {
+			r: 0.96
+			g: 0.54
+			b: 0.18
+			a: 1
+		}
+	}
+	muted-chip: {
+		name: white
+		color: {
+			r: 0.4
+			g: 0.45
+			b: 0.52
+			a: 0.25
+		}
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: {
+		up: button-secondary-up
+		down: button-secondary-down
+		over: button-secondary-over
+	}
+	toggle: {
+		up: button-secondary-up
+		down: button-secondary-down
+		over: button-secondary-over
+		checked: button-primary-down
+	}
+	spinner-up: {
+		up: spinner-up
+		down: spinner-up-pressed
+		over: spinner-up-over
+	}
+	spinner-down: {
+		up: spinner-down
+		down: spinner-down-pressed
+		over: spinner-down-over
+	}
+	close: {
+		up: close
+		down: close-down
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle: {
+	default: {
+		checkboxOn: checkbox-on
+		checkboxOff: checkbox
+		checkboxOver: checkbox-over
+		font: font
+		fontColor: text-primary
+	}
+	radio: {
+		checkboxOn: radio-on
+		checkboxOff: radio
+		checkboxOver: radio-over
+		font: font
+		fontColor: text-primary
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle: {
+	default: {
+		up: button-secondary-up
+		down: button-secondary-down
+		over: button-secondary-over
+	}
+	ghost: {
+		up: button-ghost-up
+		down: button-ghost-down
+		over: button-ghost-over
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton$ImageTextButtonStyle: {
+	default: {
+		font: font
+		fontColor: text-primary
+		up: button-secondary-up
+		down: button-secondary-down
+		over: button-secondary-over
+	}
+	primary: {
+		font: font
+		fontColor: black
+		up: button-primary-up
+		down: button-primary-down
+		over: button-primary-over
+	}
+	ghost: {
+		font: font
+		fontColor: accent
+		up: button-ghost-up
+		down: button-ghost-down
+		over: button-ghost-over
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: font
+		fontColor: text-primary
+	}
+	title: {
+		font: font
+		fontColor: accent
+		background: divider-line
+	}
+	section: {
+		font: font
+		fontColor: text-primary
+	}
+	muted: {
+		font: font
+		fontColor: text-muted
+	}
+	danger: {
+		font: font
+		fontColor: danger
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle: {
+	default: {
+		font: font
+		fontColorSelected: text-primary
+		fontColorUnselected: text-muted
+		selection: selection-muted
+		background: list-background
+	}
+	save-slots: {
+		font: font
+		fontColorSelected: text-primary
+		fontColorUnselected: text-muted
+		selection: selection-strong
+		background: list-background
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: slider-track
+		knobBefore: slider-track-before
+	}
+	default-vertical: {
+		background: progress-bar-vertical
+		knobBefore: progress-bar-vertical-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: {
+		background: panel-dark
+		hScroll: scrollbar-h
+		hScrollKnob: scrollbar-h-knob
+		vScroll: scrollbar-v
+		vScrollKnob: scrollbar-v-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: font
+		fontColor: text-primary
+		background: select-box
+		scrollStyle: default
+		listStyle: save-slots
+		backgroundOpen: select-box-pressed
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Slider$SliderStyle: {
+	default-horizontal: {
+		background: slider-track
+		knob: slider-knob
+		knobOver: slider-knob-over
+		knobDown: slider-knob-down
+		knobBefore: slider-track-before
+	}
+	master-volume: {
+		background: slider-track
+		knob: slider-knob
+		knobOver: slider-knob-over
+		knobDown: slider-knob-down
+		knobBefore: slider-track-before
+	}
+	sfx-volume: {
+		background: slider-track-sfx
+		knob: slider-knob-sfx
+		knobBefore: slider-track-before-sfx
+	}
+	default-vertical: {
+		background: slider-v
+		knob: slider-v-knob
+		knobBefore: slider-v-before-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+	default-horizontal: {
+		handle: split-pane-h
+	}
+	default-vertical: {
+		handle: split-pane-v
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: {
+		font: font
+		fontColor: text-primary
+		up: button-primary-up
+		down: button-primary-down
+		over: button-primary-over
+	}
+	primary: {
+		font: font
+		fontColor: black
+		up: button-primary-up
+		down: button-primary-down
+		over: button-primary-over
+	}
+	secondary: {
+		font: font
+		fontColor: text-primary
+		up: button-secondary-up
+		down: button-secondary-down
+		over: button-secondary-over
+	}
+	ghost: {
+		font: font
+		fontColor: accent
+		up: button-ghost-up
+		down: button-ghost-down
+		over: button-ghost-over
+	}
+	danger: {
+		font: font
+		fontColor: white
+		up: button-danger-up
+		down: button-danger-down
+		over: button-danger-over
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: font
+		fontColor: text-primary
+		background: input-background
+		cursor: accent
+		selection: selection-strong
+	}
+	save-slot: {
+		font: font
+		fontColor: text-primary
+		background: input-focus
+		cursor: accent-strong
+		selection: selection-strong
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: muted
+		background: panel-medium
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Touchpad$TouchpadStyle: {
+	default: {
+		background: panel-dark
+		knob: slider-knob
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Tree$TreeStyle: {
+	default: {
+		plus: folder
+		minus: folder
+		selection: selection-muted
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	default: {
+		background: panel-medium
+		titleFont: font
+		titleFontColor: text-primary
+	}
+	main-menu: {
+		background: panel-dark
+		titleFont: font
+		titleFontColor: accent
+	}
+	pause-menu: {
+		background: panel-light
+		titleFont: font
+		titleFontColor: text-primary
+	}
+	save-menu: {
+		background: panel-medium
+		titleFont: font
+		titleFontColor: text-primary
+	}
+	overlay: {
+		background: panel-overlay
+		titleFont: font
+		titleFontColor: text-primary
+	}
+}
+}

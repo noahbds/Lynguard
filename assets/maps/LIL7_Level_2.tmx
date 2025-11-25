@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="27" tilewidth="16" tileheight="16" infinite="0" nextlayerid="18" nextobjectid="11">
+ <properties>
+  <property name="player_spawn_level_2" value=""/>
+ </properties>
+ <tileset firstgid="1" source="Tiles_Legacy_Fantasy.tsx"/>
+ <tileset firstgid="626" source="waterfall_animated_bg.tsx"/>
+ <tileset firstgid="721" source="water-fontain.tsx"/>
+ <tileset firstgid="737" source="tile_village_objects.tsx"/>
+ <tileset firstgid="1217" source="village_object.tsx"/>
+ <tileset firstgid="1379" source="medieval_deco.tsx"/>
+ <tileset firstgid="1517" source="indutrial.tsx"/>
+ <tileset firstgid="1768" source="Dungeon Tile Set.tsx"/>
+ <layer id="2" name="background" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJxd1t2xqzAMBGAP1SR5BroAag3pAijqwlx9wx4ePCQg62e1K3tvrf3O1Z/re65X19p+Pudzred6d/+/7/XtslnONZxrrOdQ9nP5ueymstvq/2VznOtTPq7nVt/7inXZiTeUzVDffxVvrzynym0uH0v5Z7eU3S/yGSvOXH6W+j2Uj8tfX//X8seH3Pew857dXmsLLIbA8MpjrH1L2fb1fSw/MF/KXh5L2apLLd+Kwee191ULFlvZ9pXXWPv66NcSeUz1fg8sxNzrOQeuR+Rz+YDTHnHl2Ec9S8RPXuCGWsWW96u+w+zT3ZycKub26MsavdlrD/5MtVdOejZH3Hd346M+/qd6h3+f7taTPfKe6jlHXckPfTkC+6ndvYQzLPv6PpU/Ohpjr/4f7S+OdPuqfGkRl9SGozStPtynpaXdmvBuCK6pwzzBVTbJi09314gfcIY93ZoTe2BxPGI97cwBuKpZjfrzi9/Jd/iYXWPkCgMzcY+95gxczYp38ecd9c0PLH8VK/VuBpudtCEWvPCLrt/dzfnhEYOPnBe4KU7Otuzvt93aM+OSa2LznxpM7q3BMzniyae7cXh1f3Wop/RNl3oDb/jgB23g4/sRYw28t/C1tfusEoP+nmfUFjHwHA9hpA96pke4kboUN/GBH+4f7cbaecPn3G5/OKnHaqA7GDgL9Gp6+IM37k7hjzbpEZ7m2PMOwMbdIc89eNKHnsuzb3f+eqted4G80+iX/zhBP6kxPpxxfXx3f0o+iStHdcJsDX9mHt/q1we45rzSM+cmnTkfE8MnfjDG51/EgqFZ73zBy5zfMF/DDi50jv9mHM7J+YjFHp50J+Y33sktOYU/OVPwSk/pKu0+kROe4HjGzx4nfs7WvH/mGZ13SnrB0Zzd7kN5d7LHHM97tntGahcmeJ1nYs5vcxWHcnbhjXuyOUVPZoB4ZhNu4je/zrDExX1Mvnnv0ot/WDxc8w==
+  </data>
+ </layer>
+ <objectgroup id="6" name="waterfall"/>
+ <layer id="7" name="waterfall" width="30" height="27" tintcolor="#ffffff">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2Bwg9NMA+0C+oJR/w5vMOrf4Q1G/Tu8wUjz7ygYBQMNADN9Bmk=
+  </data>
+ </layer>
+ <layer id="3" name="inner_ground" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJzFlgtuxCAMBX3/2xBuARyqWYlRByfdrVSRIllJwPGzjX81ItpJx0n1pHLSuHkf8xt67fVJddIx+dokn5V57n0wW/r3mDzez/JLkp31QDfes+7vFjphv5/4YkzZ2NWT/k0+gv8TbhefbfQ+uC3WO4Gvxuov6OlVpo7/gfvJzzsWd0bMcf9jM+6I71h3zJfNuMSn85qY3Lly/uPzvhmXHMRebN6dW2C51lIbd+MSW2Bi+87F/bqOP4FL7FJff1uz/7rwMTY+hZt7LD7fjUseuacxB+xc1Avyybhd+8QfT/f1qjPPAdQ+5hD3AOOZ13J87+7vrjX9hsfzR018Pck1H73ZM9yIqz96XO22zshxPXZdtm0lVr+2WHWxj9xT7GvHate/PclxL7Sd7Qfs3MvsN8+ByMgzoWPFsogHdKrpjHxzjbWPrcPdue/9rh+OhNtjvacj/WO/OJZtg/ug49E5ZL+2WPXwjG4dRlzj3Phfg2BFGQ==
+  </data>
+ </layer>
+ <layer id="4" name="platforms" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALqgd9A/AeJbqKTvSKMDAyijAh6Np3sTYPidCDOAOJMOtk7CkbBKBgFo2AUDHcAABTVB2Y=
+  </data>
+ </layer>
+ <layer id="8" name="decors" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJztzbcRgEAQBMGFO2T+GSIeFQRjEsAbGDtVbY/knHPOuT+2hLRiw46CAycu3Hii/rdJqUUg0aHHgBET5qz/dc65by8ClwmJ
+  </data>
+ </layer>
+ <objectgroup id="9" name="CHEST">
+  <properties>
+   <property name="KEY2" value="1"/>
+  </properties>
+  <object id="5" gid="1344" x="204.208" y="258.042" width="38" height="34"/>
+ </objectgroup>
+ <objectgroup id="17" name="CHEST2">
+  <object id="10" gid="1345" x="59.375" y="112.063" width="39" height="33"/>
+ </objectgroup>
+ <objectgroup id="11" name="decors">
+  <object id="3" gid="721" x="147.37" y="281.072" width="32" height="96"/>
+  <object id="4" gid="721" x="262.083" y="281.021" width="32" height="96"/>
+  <object id="7" gid="1440" x="308.333" y="286" width="16" height="74"/>
+  <object id="8" gid="1440" x="128.333" y="287.333" width="16" height="74"/>
+ </objectgroup>
+ <layer id="1" name="ground" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhYIMbIwDADSM8E4lkMqOzZNLR3Cx65vzS09yweOXxhQS4bBvD5l5YAn39pCUBx2AjE9UDcAGU30cFeUBzSMx3jAyMtzkftHbV31F7KwT9gkQkqN6mJGxggZTA+IM7I0AAqN6mJYWXwKBgFo2DoAgDTzDwb
+  </data>
+ </layer>
+ <layer id="12" name="Foreground" width="30" height="27">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6Ad9s9mJGO4AxKQQI+d7wEAAA0OaPwA1Q==
+  </data>
+ </layer>
+ <layer id="13" name="PLAYER_SPAWN" width="30" height="27" opacity="0.5" tintcolor="#0000ff">
+  <properties>
+   <property name="player_spawn_level_2" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzbENAAAIw7Bu8P/FDHwBtpQ5CQBwQdf25QvcNh/DAD0=
+  </data>
+ </layer>
+ <layer id="14" name="INV_BAR" width="30" height="27" opacity="0.5" tintcolor="#ff0000">
+  <data encoding="base64" compression="zlib">
+   eJztzUEJAAAIBLD7mcb+9SwhiLAVWAK7urxer9frvX+B3wbCMgLZ
+  </data>
+ </layer>
+ <layer id="15" name="RETURN_LEVEL" width="30" height="27" opacity="0.5" tintcolor="#5555ff">
+  <properties>
+   <property name="player_return_level_1" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGFtBlh+BRe4envaNgFIyC4QEAHKgBoQ==
+  </data>
+ </layer>
+</map>

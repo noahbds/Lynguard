@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+
+//[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+//eclipse.project.name = appName + '-core'
+
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    api "com.badlogicgames.ashley:ashley:$ashleyVersion"
+    api "com.badlogicgames.gdx:gdx-ai:$aiVersion"
+    api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "com.github.raeleus.TenPatch:tenpatch:$tenPatchVersion"
+    api "com.github.raeleus.stripe:stripe:$stripeVersion"
+    api "com.github.tommyettinger:textratypist:$textraTypistVersion"
+    api "com.github.tommyettinger:freetypist:$freeTypistVersion"
+
+    if (enableGraalNative == 'true') {
+        implementation "io.github.berstanio:gdx-svmhelper-annotations:$graalHelperVersion"
+    }
+}

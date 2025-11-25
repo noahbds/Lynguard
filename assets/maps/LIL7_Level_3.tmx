@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="64" height="24" tilewidth="16" tileheight="16" infinite="0" nextlayerid="19" nextobjectid="35">
+ <tileset firstgid="1" source="Dungeon Tile Set.tsx"/>
+ <tileset firstgid="271" source="dungeon_textures_5b14s.tsx"/>
+ <tileset firstgid="285" source="medieval_deco.tsx"/>
+ <tileset firstgid="423" source="medieval_objects.tsx"/>
+ <tileset firstgid="580" source="campfire_animated.tsx"/>
+ <tileset firstgid="620" source="grass_textures_5b14s.tsx"/>
+ <tileset firstgid="640" source="Props-Rocks.tsx"/>
+ <tileset firstgid="1018" source="forcefield.tsx"/>
+ <tileset firstgid="1044" source="magic_effects.tsx"/>
+ <tileset firstgid="1142" source="nightborne_warrior.tsx"/>
+ <tileset firstgid="1263" source="village_object.tsx"/>
+ <tileset firstgid="1425" source="indutrial.tsx"/>
+ <tileset firstgid="1676" source="Tiles_Legacy_Fantasy.tsx"/>
+ <layer id="1" name="background" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztmEuuq0AMRGshsAKyAlhBVhCm/KchENb/QKojO3d6M3s3UiuB7nb7Uy67I/19/j7/72c7x+McyzmmcxznaM9RnmP23DU6rxn8/TzH2/tbr73evc5xP0fld/s5Gv8uzrFaxu7zBr+7+d3TOjw9V3qu9fMlY0xrfvtZPSbb01l/7HtYr8ue2mvfHovnXl5f+Lnz/G5Zb+/DD6N/P7yn9vfDa2vLqy3rWrv5nCXZ/viC/S/b3iow0Fh+6/FI54ON0nYUCgwgo7IdRdJ38bvev/HV5ufRc1va2yV9Ko/OY/W+334K21olWw8/3/0M3q7fg/2w+n3pd5UCB5sHchvbuqQzFgUmDkX8N59b+H0e4LHy3uJL9h8KH3e2a0l63KzXaFsvG3qvv75n7ys81ylwNVsWfixsx6TIJXxU+n3psyf77ZJRe/SKnO2/YD/8dNNn7qEzuH8pMInOnSLG6Nla91mBlclyej+D68Xnkt+LIgfJDXKnVcQBjB5fsH9KuoDDymctycbJv3eff7M9l61gkdyE01avby2j+fH78iP8jq/f1mPwc2V51Al4uf6S/XAueTha9qjgxVoRk7v17RT8TYzhbHS82b5DUeOoI9RA4njJANujgkMvvRbPMUrPzYqa0CSde0VtJW5wN7Elpjnv4UDmnn5PT0AvANcRG/IeO5cki9xYrHerqJm8H5KvbkmvWsGpczp7SXJy7ej0ybHUDHqTLc0P9uHTZxbJ5pf30HeAz9Hz1Prr3V2Rp6P3wWubIg9mj03BDW3aC87ANraTE3PyL9xA/vV+904y8QnxJmdZQy9Se47+bFf0MGDp6W96r4wrathm+YMiN6jnrCNe2R+TdbinWMNvL8vO2KWnRGf0Jy/xE71caR3AEznI3MNnroqaA5eRR4tlYH+n6FeRDR+WihyH38AqtXT0WY0if+DbwjaQ92CzUuQ92IETR8sfFNyDz+ij8cuk4C/qNnmzWx74gZMbBZaOZCdxxfdwIf3TmtbnARbHpCtYIBbkMHjubUfjb/rI1euIEz3JXYFjOKlW4GdV8DD3jNpnlYq+gN4NbJFD1LlnklMln1EbyFl6AnIMfMNr3BfoM+B/+lDuTfgMPcE0PVGuW2CEONO3srdT3N0yR9LTVYr7GDWdPg3/ECtqAL7A55PPpZ5TJ8rkW3TY0z5wTl5Rs+gRiT895epz6JHx02H/HYrawvlgdEr7wQhxIDZwE3Gn9uEPeIv72pr8VyvqCHzMPmJRWQ/ine/bZZKFbWCeuFAjwBH74Uf8NSnutHd99jrUzDnZ9E4yiBn8mftT4pz7p/xfADhtFPU93yGIHXwIbsEOtZz+GazCe+RV7hXIj1LBCWCwVGAXPfEJuIBPn4o6S17A3zd93vvII/g859OuuDPm/xOoc9QjchSupl8+0tygz3oG994V+KCOzmkQu0HB27uCD7CFvOEOSD+xJBnc5Ximp6DHyrWfHCb/+f9n8ZlwGDEcFf0a99NGn//PsId6sCn6bM6FKysF18Oz5AX1GH3QHU7rFfcN4gFu6T16BefS3xAz+iOwSC8zKP4LGJMMbGXuSGdxL6XvooZk7l+TLOzL/7vRH5EDuRehv86clu8Q1EDuKPR99BfEmfpFTSAW9B3wHnkHZ/7s5+FUauD045s4g6EtnTEmX8MP9GLU6X/d1KfC
+  </data>
+ </layer>
+ <objectgroup id="9" name="decors_obj">
+  <object id="4" gid="2147483928" x="572" y="271.182" width="44" height="53"/>
+  <object id="5" gid="280" x="659.057" y="271.682" width="44" height="53"/>
+  <object id="8" gid="288" x="92.1818" y="271.909" width="15.5625" height="15.875"/>
+  <object id="9" gid="485" x="616.364" y="304.182" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="10" name="boss_temp">
+  <object id="32" name="night_borne_warrior_boss" gid="1218" x="362.813" y="289.875" width="80" height="80"/>
+ </objectgroup>
+ <layer id="2" name="ground" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztmE1u4zAMRoUeoSt5Oxtn2W7kC1Q6gXP/q0wF8CEvRFcD14MAJkAk1g9FUhQlflsp5R48vnkP7tHWvnmLvvld43uJ31uMWcQj2tf47SGzhYxdbbeQ2UPerjW36GvRvknXVWNryBlJBjowfk3632PMnmy9SV6XfMYM2cn4LbXVZFeN9ZvsGWrv6kPnPGck+WvyiW1hDP7Ykmx8UTVvL8+x0GVTjf4qHdC5h4wltQ3Jb1oTnxIvd41tGo9exBdzhtZhfpNsbEFPr2v58/vjhflTPsMHXd9L2L6UR8w5zmb7K9Of8hw70x7nAfrW8jizPuftfJUPpWk/Z5ZzTZ4g35HHncvII/v5Kh9K037fKdiLnfhjVzv+IH+9Mk37ybPch5M599wh5Gb8xL24nq/yoTTt5+yTB7n32GPyAHeX3y71fJUPJc4/9y+/3HF+x/huJj9u56t8KB1xh1500UUXXfS79PX2vzX4md5fmI8g3oi8CagNqCVpA0MwVgAmYlyIdwi1mPEb3qJr+s+aS3m8443RGC/gPdP+0WeZ0Q/MCt2NIfk9if3oA74APjE0x+8y5GGf8QpqkioZjEE2b/hVcu1f2nnvNrHr314euJzxMNYDR6Jm3LQ+/8FgjDugP/OQsab5xoqafl3DGt8z1uZ6xn6gz1gXdZDxqFqesTD73JiZdcNOagvvdUu8S1bGNx3rYDOOd+LD54F9Mn5D3YZt9luXLGLL/oUzxkks1vLsd9tw07rWwznAWCz7bdzN6+Jf5wrjfT6Ti+RkzJl4814h07HrszHUjj+MHbBn7IWxhbtkG2fBb8QWeqL7TzVoTX2cwZx/XK/5vDPOeK5rXhg/Yxd7O/v+Ahlmn3E=
+  </data>
+ </layer>
+ <layer id="11" name="stone_dash_power_acq" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztz0ENACAQBLFNThlYAP9awAS5B62CmQQAAADoNCqZ1V3RZ933/fE/ALxyAJIjATc=
+  </data>
+ </layer>
+ <objectgroup id="13" name="desac_power_acq">
+  <object id="19" gid="930" x="633.813" y="269.438" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="12" name="dash_power_acq">
+  <object id="15" gid="939" x="633.818" y="269.455" width="16" height="16"/>
+  <object id="16" gid="998" x="595.93" y="232.289" width="8.13043" height="8.17391"/>
+  <object id="17" gid="998" x="670.978" y="232.783" width="8.13043" height="8.17391"/>
+  <object id="18" gid="930" x="633.826" y="269.435" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup id="14" name="dash_unacces">
+  <object id="29" gid="1089" x="604.875" y="297" width="72" height="72"/>
+ </objectgroup>
+ <layer id="7" name="decors" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzt0jENAEAIwECwgfqX+gZYCQm5myqgEQAAAGx62TdMKq8BwHkf/lQBXg==
+  </data>
+ </layer>
+ <layer id="3" name="foreground" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJztzksOREAYRWEDq2AFrIAVsOOO59AES9DdKxHX0Mwj5Zc4X3JGVam6ngfgzSb1VT/1P3G+qlWj2oN/F6pU1c77n4Pv36VXgxod/9M5fh+4S6JS6xGGMpVbjwCwEajQeoShSMXWIy6afesFAAAAz7QA9voRxQ==
+  </data>
+ </layer>
+ <layer id="6" name="skeletons" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzt1rENACAMA0HvPxkwFQUbkCII3U3wcuUEgKrZHQAAAI8ZOT95dYd8wp4A3NhAHQWA
+  </data>
+ </layer>
+ <layer id="5" name="spikes" width="64" height="24">
+  <data encoding="base64" compression="zlib">
+   eJzt1DEKgDAQRNE5mvevjTG3ccsgWliJ+B4Mv95mEwAA4Au2ZOm1c/famLrW2k3fvgGA5+rfp1+0/n7G1PrzaTcF4J8OqIkgsQ==
+  </data>
+ </layer>
+ <layer id="15" name="PLAYER_SPAWN" width="64" height="24" tintcolor="#0000ff">
+  <properties>
+   <property name="player_spawn_level_3" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzzENAAAIBDE2XOFfFgMu+DY5AVcFAAAATF+p0v8B4KMFHcMBFQ==
+  </data>
+ </layer>
+ <layer id="16" name="LEVEL_TRANSITION" width="64" height="24" opacity="0.5" tintcolor="#00aa00">
+  <properties>
+   <property name="level_transition_level4" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzzENADAMwLA+44+n7AYjUmUjSGYAAADu21cXtPzXBS3/dQEAND6OrgO3
+  </data>
+ </layer>
+ <layer id="17" name="RETURN_LEVEL" width="64" height="24" tintcolor="#ffff00">
+  <properties>
+   <property name="player_return_level_1" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztz7ERADAIAzE6tsr+Y1GwQ1wg3bn3VwEA17zeXaVfv/70ixz9+vWnXwAAPw1JNATb
+  </data>
+ </layer>
+ <layer id="18" name="SLIMES" width="64" height="24" tintcolor="#ff55ff">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAAAAAPBmGAAAAQ==
+  </data>
+ </layer>
+</map>

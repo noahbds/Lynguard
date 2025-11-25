@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="16" nextobjectid="53">
+ <tileset firstgid="1" source="The Sidescroller's Dungeon Tiles 32x32.tsx"/>
+ <tileset firstgid="400" source="background_layer_1.tsx"/>
+ <tileset firstgid="620" source="medieval_objects.tsx"/>
+ <tileset firstgid="777" source="medieval_deco.tsx"/>
+ <tileset firstgid="915" source="village_object.tsx"/>
+ <tileset firstgid="1077" source="indutrial.tsx"/>
+ <tileset firstgid="1398" source="Tiles_Legacy_Fantasy.tsx"/>
+ <layer id="10" name="Background 2" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMA6DxzOvPehwFe0lVVVVVVVUfHawW4Z8=
+  </data>
+ </layer>
+ <layer id="9" name="Background" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztlkEOgCAMBAl+3z/r1cRgiGVlsTMPWIaGbCkFRrNv/zz7qLrsDNSJ76IH/GK4+LU64MlvZmctAzO6odoJWXaNqjMiudcu+Mrvbf84zk+Ro8p197NHdc8s8wPohL9GDPeux88jR5Xr7mcPfw2AoZz/1Ajs
+  </data>
+ </layer>
+ <layer id="6" name="Ground" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztld0NgzAMhBGTdBRG6SgZpaNkiShPURilaYUVcxiRHz/6JNQ4OZsPty7LYjKZTCaTyWQymUymn+K6bDwO6+IlXwYfxunIS9d9zBPrB/BF5tNiRGmwaTGWfKrjtNjK+lWuzywjsbHYabCx9TAjsVGc6r7TYJthxL4J506DbYQR+xYOllD3vcTYw1a873LtvYzYt3BlOClW9i42tm5mvGOjPlLf7hh72XoYiS1UhtM9hZr0SfluhK1FT9/pEyOr05Qn1PlAnR3Z4nUW/ENN8lO+R8YI/QrC/LawMa+D+H/PXOeW2DfwndTKOMKGM5PBl29mYZSxh42db5yNzQzt07N4qDPE2MNGwr4J52JeD+MsW6zvXceZYv1dTjFq9C2BD5k0+jjLxv7DvSbjF35W+4k=
+  </data>
+ </layer>
+ <layer id="7" name="Ground 2" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAAAAAMCXARkAAAE=
+  </data>
+ </layer>
+ <layer id="8" name="Sol sol" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztzbEJACAQA8DnJ3N+C2cSEVttxELuIKQJJAIAAPhFzSi7jE3Lub3dp+/1DwAA8EIHwAIavQ==
+  </data>
+ </layer>
+ <layer id="14" name="door" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20PBxQAAAAAAMCXARkAAAE=
+  </data>
+ </layer>
+ <objectgroup id="12" name="Calque d'Objets 1">
+  <object id="30" gid="887" x="135" y="305" width="46" height="29"/>
+  <object id="31" gid="887" x="198" y="304" width="46" height="29"/>
+  <object id="32" gid="887" x="262.5" y="304.5" width="46" height="29"/>
+  <object id="34" gid="887" x="326" y="304" width="46" height="29"/>
+  <object id="35" gid="887" x="390.5" y="304.5" width="46" height="29"/>
+  <object id="36" gid="887" x="453" y="304" width="46" height="29"/>
+  <object id="37" gid="919" x="564" y="313" width="36" height="50"/>
+ </objectgroup>
+ <layer id="13" name="PLAYER_SPAWN" width="40" height="40" opacity="0.5" tintcolor="#0000ff">
+  <properties>
+   <property name="player_spawn_level_12" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzrERABAABLDvLMgY7F+ygNOhSCZIAgAAnNSStPJ6sdfXbXz8AwAAuG0C6jsBoQ==
+  </data>
+ </layer>
+ <layer id="15" name="LEVEL_TRANSITION" width="40" height="40" opacity="0.5" tintcolor="#00aa00">
+  <properties>
+   <property name="isclosed" value="TRUE"/>
+   <property name="level_transition_level13" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt0LENACAMA0E6FoQxYP+SSIzgJsWd5N76M8e4ta5WfduN/x39Ivpl9Mvol9Evo19Gv4x+me79AAAA+B4IwQ+K
+  </data>
+ </layer>
+</map>

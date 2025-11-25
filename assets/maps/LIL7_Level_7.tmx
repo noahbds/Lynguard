@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="3">
+ <tileset firstgid="1" source="Tiles_Legacy_Fantasy.tsx"/>
+ <tileset firstgid="626" source="TX Village Props.tsx"/>
+ <tileset firstgid="4722" source="waterfall_animated_bg.tsx"/>
+ <tileset firstgid="4817" source="items_textures.tsx"/>
+ <tileset firstgid="5494" source="indutrial.tsx"/>
+ <objectgroup id="5" name="Calque d'Objets 1">
+  <object id="1" gid="4811" x="-14" y="304" width="344" height="336"/>
+ </objectgroup>
+ <layer id="1" name="ground" width="20" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztxkcNADAMxdAw70DRgaIDYB0VQq7f0pNsppRSv4SMEnxX0dAxgu8mFjZO8N3FA+apI+Y=
+  </data>
+ </layer>
+ <layer id="4" name="Foreground 1" width="20" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt0LdKg1EYBuB/1d/ZPsfEqPE6FGyDfY6a2K5DwTZYdzXWXIltsO4mdi/BZwhEIcI/OPrBw4HzfrxwThD8z/dJVwXBBJNMkSHLNDPMMsd8VbS+XXt77JPjgEOOOOaEU/IR+x7tFSjyxDMvvPLGOx98RuyLVQdBC3EStJKkjXY6SNFZHa0vbW+CSabIkGWaGWaZYz5i3669PfbJccAhRxxzwin5iH2P9goUeeKZF155450PPiP2xUL/R5wErSRpo50OUnSGv3cMyobooZc++hkIy9kwI4wyxnjprDTr7jdYYpkVVlkLy9kmW2yzU6Gny/u7S39wLb/hjHMuuOQqLGe33HHPQ4W+BV2Lpb7amiCoo54YLcRJ1PzMGmikiebS+dfzBYOtUIA=
+  </data>
+ </layer>
+ <layer id="3" name="Foreground" width="20" height="16">
+  <data encoding="base64" compression="zlib">
+   eJzt0MltwkAAhlEnUg5gauBIALN0xQ6uJG2wGrinIMCsLeQhRUpu8dwz0tNcfn+SJ4r+z+/TK0VRnwFDRoyZMGVGWirem9suWLJizYaMLTv2Ab2D7ZETOWcuXLlx5xHQq5Wj6J06DZoktGjToVsu3uvZ9hkwZMSYCVNmpAG9ue2CJSvWbMjYsmMf0DvYHjmRc+bClRt3HgG9Wuz9qNOgSUKLNh26cfFez7bPgCEjxkyYMiMt2Ht79X62Hy/ez71izYaMLTv2f/Se339S1TvYHr+bufvMJf7ZPO9HwP/WKt6POg2aJLRo06FbKd4LPV+w00WR
+  </data>
+ </layer>
+ <objectgroup id="6" name="Calque d'Objets 2">
+  <object id="2" gid="5216" x="171" y="222" width="32" height="28"/>
+ </objectgroup>
+ <layer id="7" name="PLAYER_SPAWN" width="20" height="16" opacity="0.5" tintcolor="#0000ff">
+  <properties>
+   <property name="player_spawn_level_7" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDBdgAsSmVDTPF4j9qGjeYAMAB1MBBQ==
+  </data>
+ </layer>
+ <layer id="9" name="RETURN_LEVEL" width="20" height="16" opacity="0.5" tintcolor="#aaaaff">
+  <properties>
+   <property name="player_return_level_5" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJwzYaAu8KWyeSZUNm/UfZSBUfdRBkaa+wY7AABjBgOI
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,162 @@
+@startuml
+skinparam style strict
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+
+package eu.epitech.lil7_games {
+  class Lynguard {
+    +create()
+    +render()
+    +setScreen(Class)
+    +getAssetService()
+    +getAudioService()
+  }
+
+  package screen {
+    class GameScreen {
+      -Engine engine
+      -MapAsset currentLevel
+      +show()
+      +render(float)
+      +createSaveData(String)
+    }
+    class MenuScreen
+    class PauseScreen
+    class LoadingScreen
+    class DeathScreen
+  }
+
+  package asset {
+    class AssetService <<Service>> {
+      +load(asset: Asset)
+      +get(asset: Asset)
+      +dispose()
+    }
+    enum MapAsset
+    enum SkinAsset
+  }
+
+  package audio {
+    class AudioService {
+      +playMusic(MusicAsset)
+      +stopMusic(MusicAsset)
+      +setMap(TiledMap)
+    }
+    enum MusicAsset
+  }
+
+  package component {
+    class Transform <<Component>>
+    class Life <<Component>>
+    class Player <<Component>> 
+    class Enemy <<Component>> 
+    class Velocity <<Component>>
+    class Collider <<Component>>
+    class Animation2D <<Component>>
+    class Dash <<Component>>
+    class Dying <<Component>>
+    class Patrol <<Component>>
+    class Graphic <<Component>>
+  }
+
+  package system {
+    class PlayerSystem <<System>>
+    class EnemySystem <<System>>
+    class HazardSystem <<System>>
+    class CameraSystem <<System>>
+    class LevelTransitionSystem <<System>> {
+      +setTransitionListener(l)
+    }
+    class AnimationSystem <<System>>
+    class RenderSystem <<System>>
+    class DyingSystem <<System>>
+    class AnimatedTileSystem <<System>>
+    class InteractionSystem <<System>>
+    class InvulnerableSystem <<System>>
+    class LifeSystem <<System>>
+    class DamagedSystem <<System>>
+    class NoGravityHudSystem <<System>>
+  }
+
+  package save {
+    class SaveData {
+      +slotName : String
+      +levelName : String
+      +playerX : float
+      +playerY : float
+      +playerLife : float
+      +playerMaxLife : float
+      +playerKeys : List<String>
+    }
+  }
+
+  package tiled {
+    class TiledService <<Service>> {
+      +loadMap(level: MapAsset)
+      +setMap(map: TiledMap)
+    }
+    class TiledAshleyConfigurator <<Factory>> 
+  }
+
+  package ui.model {
+    class HudViewModel <<ViewModel>>
+    class MenuViewModel <<ViewModel>> 
+    class GameViewModel <<ViewModel>>
+  }
+
+  package ui.view {
+    class HudView <<View>>
+    class MenuView <<View>>
+    class PauseView <<View>>
+    class SaveView <<View>>
+  }
+}
+
+' Relationships
+Lynguard --> AssetService
+Lynguard --> AudioService
+Lynguard --> GameScreen
+Lynguard --> MenuScreen
+Lynguard --> LoadingScreen
+Lynguard --> GameViewModel
+Lynguard --> MenuViewModel
+
+GameScreen --> Lynguard
+GameScreen --> AssetService
+GameScreen --> AudioService
+GameScreen --> TiledService
+GameScreen --> HudViewModel
+GameScreen --> SaveData
+GameScreen --> LevelTransitionSystem
+GameScreen --> RenderSystem
+GameScreen --> PlayerSystem
+GameScreen --> EnemySystem
+GameScreen --> HazardSystem
+GameScreen --> AnimationSystem
+GameScreen --> CameraSystem
+GameScreen --> InteractionSystem
+GameScreen --> InvulnerableSystem
+GameScreen --> AnimatedTileSystem
+GameScreen --> DyingSystem
+
+PlayerSystem --> Player
+EnemySystem --> Enemy
+HazardSystem --> Collider
+RenderSystem --> Transform
+RenderSystem --> Graphic
+AnimationSystem --> Animation2D
+DyingSystem --> Dying
+LifeSystem --> Life
+
+SaveData --> MapAsset
+HudViewModel --> Player
+MenuViewModel --> SaveData
+
+TiledService --> MapAsset
+TiledAshleyConfigurator --> Transform
+TiledAshleyConfigurator --> Collider
+
+HudView --> HudViewModel
+MenuView --> MenuViewModel
+
+@enduml

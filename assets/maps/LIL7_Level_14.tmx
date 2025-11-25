@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="1">
+ <tileset firstgid="1" source="The Sidescroller's Dungeon Tiles 32x32.tsx"/>
+ <tileset firstgid="400" source="calm-water-autotiles-anim.tsx"/>
+ <layer id="3" name="background" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJx9lEkOxDAIBHk6PALeOznEUqmC54BiYpamAVdE9CP1SD4yr5TOLb3gd3z7/fpu9L9l34ifwNHQiZG2A9tRTOan3vHFUjoPJPGfeFJ29hv5EQd5pJgn5qS/uXfOUZ683Btf6p45GIO+xmWuWfONh21eXKvr8r1ngGfGnvjicd0tO9q47llyED/tXbN3wL1xv26csDcZOx+3/XNO7oLnf8PheO6n+2+fku22kweLOdrmne9JS/dMblx4hv02mB9zsb1N7sm/Gaavd3Cr3zbH9weY+Ms2
+  </data>
+ </layer>
+ <layer id="11" name="wall" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJx7xcDA8A+IXyLRMPZ/JPoVlP6PxP+Hpu4VEhtdH8hMWgKYe2gJQH5A9jvMry/RxNDD7SUWjKyPHm4fBaNgFIwsAAAgtDLN
+  </data>
+ </layer>
+ <layer id="14" name="wall_hole" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAfYGRkYGBipA0NA2JAtjgjbehRMApGwSgYKgAAevcCVg==
+  </data>
+ </layer>
+ <layer id="13" name="decors2" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF2IAiIwODDBDLMtLODjOg2YZAbERDO0bBKBgFIxMAAGgCAPo=
+  </data>
+ </layer>
+ <layer id="16" name="pilarsreflec" width="25" height="15" mode="overlay">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDDQopzEbBNpozAaB2TRmg8AGGrNB4CiN2SBwi8ZsAMysHzk=
+  </data>
+ </layer>
+ <layer id="7" name="pilars" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF+IACIwODPBDLMdLODlOg2SZAbAy1oxhJDsR2AYo7MELYjowQProaJ0YIhqmHiTszQjCI7coIwSDQhqQfxg5lxC4OY4czQjC6eAQjBIPYUYwQDAKzkdTRgg0CG2jMBoGjNGaTA+6RyB4FIw8AAN8yIho=
+  </data>
+ </layer>
+ <layer id="12" name="doors" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAOeAfE76lkFi7AzMjAwMJIWzskgOZL0tgOXaD5ejS2YxSMglEwsgEAI4UCdw==
+  </data>
+ </layer>
+ <layer id="8" name="ground2" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1ADMQMxEBXoUjIJRMAqoAQDN+AAu
+  </data>
+ </layer>
+ <layer id="15" name="water" width="25" height="15" opacity="0.2" mode="screen">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAJMsIuRgWE3EO8A4m1I7J1AvBeJDRL/yUi+PT8ZiceUAHrYQax91AYgM1dB8TIgngXEAE63J+g=
+  </data>
+ </layer>
+ <layer id="5" name="ground1" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMJQBIxAzATEzEg0ABlAADA==
+  </data>
+ </layer>
+ <layer id="10" name="stair_decors" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIw2IA7EEje3QAWJdGtsFM5uWdsHMRqepaRfMLHSamnbh8gc1/YXLH9T0F7H+oMRfxPqDEn+R6w9S/AUAB3MO3A==
+  </data>
+ </layer>
+ <layer id="6" name="stairs" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFxAI3IHansR3RQBwzateoXaN2jdpFhl3IAAC91A3t
+  </data>
+ </layer>
+ <layer id="17" name="PLAYER_SPAWN" width="25" height="15">
+  <properties>
+   <property name="player_spawn_level_14" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRQA8gTke7AA+QABg=
+  </data>
+ </layer>
+ <layer id="18" name="LEVEL_TRANSITION" width="25" height="15">
+  <properties>
+   <property name="level_transition_level15" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBg6QByKh7odo2AUjIJRQGsAANB7AF0=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="10" height="83" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
+ <tileset firstgid="1" source="Tiles_Legacy_Fantasy.tsx"/>
+ <tileset firstgid="626" source="indutrial.tsx"/>
+ <layer id="1" name="background" width="10" height="83" mode="multiply">
+  <data encoding="base64" compression="zlib">
+   eJxd11GOgzAMBNCI09BKBan04tBbQA+1oPVTpv2ISiCxPfZ4kj6G1o7W2naOzzke5/x1jukc73O+t//v1++71t3r+zX22nOvfWP9Xu/n8/d5jtvwb5vdo56vb0v5mWvNrb5f87mex1q7177H0L/f6v295u+I51axXO+WWnf5XwsPTH6PGrCI5Rk+fH+3jvWouPkW5xj5eRT2R9m98ri2jmEtu4Y6fGrNUuNWduZat5SfsWwchXWKeoh7Kntin+O7fMnBWPNH8AAWNRDPc+i1nurdUvO1crFFbteKxZolavKKuLbgwVRr5RxmuYHJPtzE3SPqJa/PsIODMMi7XK+tx7tVHrIvPq3Xdx46Dpy7l015zvj36qtXYZFzPD5afydGvaGv1rB9L5u34btX9IAcwJ35w211e7feR3pfnMnDvfX+fUTt5H4ZvmsrL56zl/l6FFY9lrVTnzHWpP/kCn3LvtAHuE375ADGeeh78fQTeRA3zDg+Dr3utDJ1KTHjBq2RTzVkj07gwBg83luPTb31Ge7vYV9Ma+1jQz/DCDcePX98r5HbjBmWrLVeSW3HETw+QovVQq2cJeq6te/epV3Wp55lPtTu3bpesaO3nIfZs5/Wealf1sAjfn1B/46Ij7bT3GXo3FM79RmHrrFyZx+dk3++adQYONSAv7V1jbZfLdfWtUmt2XX+yzedhcE5+KoYtx99zLMUX+QdtxO3HnyGr2f40m9wyFXylH8+1F//4SsNhndv3/3m3MYnNcRRvZS4xb2EHbGkTuSd5zb0u8T0E+809BgN3zMveOwe5r2+gIUm5RnlbH+FzZxnX63hh47SfVze23dfwfwJvPyol3PmCN95j0u9pBNrPLOHz3SfRjrfprAND+45t/IuBgO+qBN/em6OWMfYk2cWTqn/1vqa1EP3cPzYfjA6+/OMfAdG9cY/OOzH2y3w3yMO+ZMHGjD94Pi9z+EuDU3/+b9CDmFxT0k9F5988U239Z/ewT+cd36ZX89/T25Q6Q==
+  </data>
+ </layer>
+ <layer id="3" name="water" width="10" height="83">
+  <data encoding="base64" compression="zlib">
+   eJztyMsJACAQA9Fs/52pVfjpw4AIixV4mAdhIBIAAAAA/KmGVOK0pb66v+FNb6VeG6tvCic=
+  </data>
+ </layer>
+ <layer id="2" name="foreground" width="10" height="83">
+  <data encoding="base64" compression="zlib">
+   eJylVsFNxEAMtFJNEinp5a4ioAugCTahCZLQBVAHts6jtYAdRyKSdY8bzXrGXnsPEVk1XuX396IxdSJFfzeNQ+P9D9ybRq+4MWBbfBfH2pk74StSMYzPcLOfWwjf0N3O3ZyzxbeH/FbCZ75cHZ/5Z7Enei2/Ieho8Q1dPZPx2ZmXE/kZZpPqd4tvk5ofq4fVYnEM4xtdxyK8HiVoZv0HvYfk/qEPWL8YBlwsv586mH+oBfNvCnyZ3jP59d6nm0fWz0fCNwX/GN/hZ6NuzD94w/RGDKtvH/LL/LNaLB7/9a9InRssPzsLPi+ED3MIcyPLL/MP8wW9xfLrT9w3aICOFp/5MXa175neODdY/2Fmsfu2SL0jrP9MK/YHq8fmmrN5FfuU6YXPWX5xv7F6rI47hPuH/LJ5hTuU9TP8w7ksP+wP5t/Qnd9HZ/b57P2S6Z0CLpsHS8Bl8zTzb+jqHWL1xR6EL6y+2NEsP9M6+z1n+YEne1+hvtl74+rnYva2+PCOyPoFcyjTazzYNWz/2n/Tifk3hnma8aG2zD/MAeDZ+7QEfPZ+xlxj+cWeye7Hh8anxleDzzDmC/uwj6YEh/tmmu807jUeGnzmhfXCo8aTxnMDZ15Y7b4Bw3c59Q==
+  </data>
+ </layer>
+ <layer id="4" name="PLAYER_SPAWN" width="10" height="83" opacity="0.5" tintcolor="#0000ff">
+  <properties>
+   <property name="player_spawn_level_9" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztyqENAAAIwDD+P4cLMRgUOEybzC1iym5z/QAAAL4VtxUCyQ==
+  </data>
+ </layer>
+ <layer id="5" name="LEVEL_TRANSITION" width="10" height="83" opacity="0.5" tintcolor="#00aa00">
+  <properties>
+   <property name="level_transition_level10" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztyrEJAAAIBLEfyv1ns3EAQbBK4LpLAAAAbmr6/rYanMgBOQ==
+  </data>
+ </layer>
+</map>

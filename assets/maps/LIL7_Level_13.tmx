@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.11" tiledversion="1.11.1-99-gec89c545" orientation="orthogonal" renderorder="right-down" width="50" height="70" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="1">
+ <tileset firstgid="1" source="medieval_objects.tsx"/>
+ <tileset firstgid="158" source="The Sidescroller's Dungeon Tiles 32x32.tsx"/>
+ <tileset firstgid="557" source="Tiles_Legacy_Fantasy.tsx"/>
+ <layer id="3" name="backgroud2" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJytlFFq5UAMBP2bd/8DLwtZ8JpRVcmJ4ZHYHmuk7ur5uq7r8/37ir/n+s/j72ndZ/g9vz89p3fPb6fvqJ/THFO9ognNSP1Ntaaa0/dFg5Mm5KHNZn1OXhVNrOetjjaXsb7haNKU3hO3RUdj1zLz93fdnl3LuTY9FybM+0m7z/X/NfVu3pn/1VNjgM6L51UzTGfG9HzS31iamLg/e/phOX3Oa/oaQzTzds3Wt2euqB5paOfFZrYpN89nz6syQPkoGbLaltdnn88ZLENW15gpPBELtv6CujYD+TVlyuYqmS5zWb1TD1Mmi+51D8qL/bWMTd9Ms1UdSHvThM6X6R3pb34Yf8ZDyeRmfqttPlo2iKVJb6vzhrO6v+WBMjy9K3ktvNjsv5ED471wMultHJH2m/mNGdNs4+OGFdO87EvzWS1jtWaSNKq6GOuVyfI99XbSllimM4SyZh7Zj/QuWftp77a29kbcTSyW+4mXkm3znNbT/aaHqpVlurJAOTKP3/BdeKLcUo9FE+KE7otPRVfqb2K39FczSntSjal/4p28Mb9N18mjTa3iJ3G4Ya4wZRm8vu+v2//0zZZrY9x6NMb//X+/rE9jxDwnHi0H5PXzMuYnbY3jwg9xWM6F+2Ws1wyRT9ssk7bTHKceKzfUT/GTMvhGn+m98T1pNXm48YcYr9ktnlaG3/BTe580JC8qZ5XDaU/Sh3gl7zc9kZakEXlt2pEXNEPhhmpOzBc2KDOUsS13Nmfx/ide2IyWBdKX8rPl3DwtntEaYpp8rBksPG0ZJD9t75KnN2zQPWWD1p28Iq3JU+PfmKr52+5HfhUGi+6UWfKXeDI/jf+i+bTvhsXiGdV/+2ybm6rr9t7mK7xTrTKD5ZjOmzc9lYxWrYoXlaFa33ouvZzWUj3ba8rRhumSB+uRdJr6szOl5HVz/kx7UN+Uk41v21mnvaj3wkjJAfVWM2EZKnPUDBZG38xquZp6qYzUPeh70oFyX9iaeCO+KD9VvzrPVJ88pnmmPar+lt9TvzQrrbE8VW6tR5qt8nXqb9t/naN6Mele8mYa2Dy1T+O7Zsk8II1qnijfv8kW5ZeYKutJu6rTad/SQ/HX9tp6YjpMayoLk7/Gwmkf0r1wN31XejGfTr2+mcH0onPBuNhoOPVsPJt+NANpZUyf3v0Bn9CANQ==
+  </data>
+ </layer>
+ <layer id="2" name="background" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztzrsOgkAARNH9coOUggRjokZ+1mYtNrSE8XFOM93klgL8kr6U7piO+CBLOoDGMx2wo6nuZcPPw4Zf/2aue41WAAB7u6UDaNzTATQe6QAAvtKp7hCt4G2se45WAAAAAAAAwNoLiWQJbA==
+  </data>
+ </layer>
+ <layer id="5" name="decors" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztlzEOAjEMBPNGxBE47v/voEjcuEGiYeLMNJa2c1bKyK3V4JzzPee1aF6F2Oc25+tL3mH5vdUi3v2YM/eR8w7Lq/bxnDP3kfMOy6v0EXvkfzn3kfOe8uvPeZU+Av3BQn+w0B8M9AcT/cFCf7DQHwz0BxP9wUJ/sNAfDPQHi9iD5oNd/ZH7oPhgV3/kPig+2N0fMeNffiyar47+YKE/WOgPJrR7wvtjQPGB/hhQfKA/BhQf7OoP7w8W+oOF/mChP1jkPij3hPfHgOID/TGg+OBXf3wAW1cyLg==
+  </data>
+ </layer>
+ <layer id="6" name="ground2" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztxjENAAAIBLEXh39NTDiAhKFd7hIAAAAAgF/qsPMAAAAAAAAAAOxr5SwDdQ==
+  </data>
+ </layer>
+ <layer id="8" name="ground3" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztzsEJADAIA0CHq/uvpDtUoZQ7COQVEsFLTicH+vb+zQcAAAAAAAAAAAAAAADgTwWdSQgI
+  </data>
+ </layer>
+ <layer id="7" name="stair3" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJzt0bsKwCAQRUFLvzf5f0hjIyEvoy7IDGx7WTgpsaIt+oFF5E63lz1d/unVQ5c+evfIZVeXNiN66NJuZA9dvpvRQ5f3ZvbQ5VlED12uRfbQ5Sy6hS616AZ3bQAAAAAAAAAAgNoB8jkSxQ==
+  </data>
+ </layer>
+ <layer id="4" name="stair2" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJzt0UEKgCAARFGXXa371P1rUbgwoUBwgvdgEFwpvxQAAAAAgAzb7AcMcP9hv87lYb37r6PvTYfRozWjgx6tmR30qBI66JHVQY9qdgM9+vTIpEcePXLpkUmPTHpk0iOTHpn0yKRHJj0y6ZFJjzx6/MN67gAy2hTk
+  </data>
+ </layer>
+ <layer id="1" name="stair1" width="50" height="70">
+  <data encoding="base64" compression="zlib">
+   eJztlUsKwyAQQF16sUK76WEauu/Rm0BWQUWdj7a+B8NAQJ2ZF5MQAAAAAAAAAAAAAAAAAAAA4F+4KeWXSXXrERXiYDszXmTERG7xcM2jvFzr8F6vRW6u0uztxaoPb6z68PZi3YcX1n14efHqwxqvPqy9rO5Dul7by+o+Zrsv3u+Tlaee82PnulKWepHO7Zd85KKl3lqvvV6k85rluzXSRym3epHObfR/o6aO2tDaJ7VvrRfp/Dw9lHqZ0UOPF635ed+H3PnSeVl4SJ3zDuFz5Oce9z0e5/Mv5msdPw==
+  </data>
+ </layer>
+ <layer id="9" name="PLAYER_SPAWN" width="50" height="70">
+  <properties>
+   <property name="player_spawn_level_13" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzjENAAAIA7D514NADOwnJK2CJgAAAAAAAAAAAAAAAAC/zHWAagFVnwC1
+  </data>
+ </layer>
+ <layer id="10" name="LEVEL_TRANSITION" width="50" height="70" mode="add">
+  <properties>
+   <property name="level_transition_level14" value=""/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztw6ENAAAIA7AJ5P6/F8MF6DZpJ+kFAAAAAAAAAAAAAAAAgK8Fd3oAMQ==
+  </data>
+ </layer>
+</map>
