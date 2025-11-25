@@ -9,7 +9,7 @@ public class NoGravityCooldown implements Component {
 
     private float remainingSeconds;
 
-    public NoGravityCooldown() { this(1.5f); }
+    public NoGravityCooldown() { this(3f); }
     public NoGravityCooldown(float seconds) { this.remainingSeconds = Math.max(0f, seconds); }
 
     public float getRemainingSeconds() { return remainingSeconds; }
