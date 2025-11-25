@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: gradle-build-outputs
-          path: build/libs
+          path: '**/build/libs/**'
 
   dependency-submission:
     name: Dependency submission
