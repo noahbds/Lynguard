@@ -6,7 +6,7 @@
  <tileset firstgid="777" source="medieval_deco.tsx"/>
  <tileset firstgid="915" source="village_object.tsx"/>
  <tileset firstgid="1077" source="indutrial.tsx"/>
- <tileset firstgid="1398" source="Tiles_Legacy_Fantasy.tsx"/>
+ <tileset firstgid="1328" source="Tiles_Legacy_Fantasy.tsx"/>
  <layer id="10" name="Background 2" width="40" height="40">
   <data encoding="base64" compression="zlib">
    eJztwwEJAAAMA6DxzOvPehwFe0lVVVVVVVUfHawW4Z8=
@@ -51,16 +51,16 @@
    <property name="player_spawn_level_12" value=""/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJztzrERABAABLDvLMgY7F+ygNOhSCZIAgAAnNSStPJ6sdfXbXz8AwAAuG0C6jsBoQ==
+   eJztzrERABAABLDvdIzB/hOygNOhSCZIAgAAnNSStPJ6sdfXbXz8AwAAuG0CMFkAiQ==
   </data>
  </layer>
  <layer id="15" name="LEVEL_TRANSITION" width="40" height="40" opacity="0.5" tintcolor="#00aa00">
   <properties>
-   <property name="isclosed" value="TRUE"/>
+   <property name="isclosed" value="FALSE"/>
    <property name="level_transition_level13" value=""/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJzt0LENACAMA0E6FoQxYP+SSIzgJsWd5N76M8e4ta5WfduN/x39Ivpl9Mvol9Evo19Gv4x+me79AAAA+B4IwQ+K
+   eJztzqENACAQBEEcDsqA/iuE5BUac2ImWb+tAQC8Zq9S+fuT/jfC/9Z928F/AAAAlAN1JgE5
   </data>
  </layer>
 </map>
