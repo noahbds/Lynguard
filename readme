@@ -1,104 +1,82 @@
-Lynguard - Core Module
-=================================
+Lil7 Games — README
 
 Overview
---------
-Lynguard is a LibGDX game using the Ashley ECS (Entity Component System) to keep gameplay logic modular and testable. This core module contains the runtime screens, components, systems, asset/service abstractions, and save-game data structures.
+- 2D LibGDX game using Ashley ECS, Tiled maps, and a MVVM UI layer.
+- Core loop managed by `GameScreen`, with systems for player, enemies, rendering, camera, hazards, transitions, and HUD.
 
-Key Concepts
-------------
-1. World Scale: `Lynguard.UNIT_SCALE` converts pixel sizes (from Tiled and texture atlases) into in‑game world units.
-2. ECS Architecture: Entities are plain Ashley `Entity` objects; behavior comes from Systems acting on specific component families.
-3. Separation of Concerns:
-	- `GameScreen` orchestrates map loading, entity spawning, transitions, HUD updates, and auto‑save logic.
-	- Systems (e.g. `RenderSystem`, `PlayerSystem`, `EnemySystem`, `HazardSystem`) implement focused functionality.
-	- Components (e.g. `Transform`, `Life`, `Player`, `Enemy`, `Velocity`) store state only—no behavior.
-4. Asset Management: `AssetService` wraps LibGDX `AssetManager` with simple synchronous helpers. Atlases, skins, tiled maps, music and sounds pass through typed `Asset<T>` descriptors.
-5. Saving: `SaveData` captures player position, life, collected keys, current level, and per‑level dead enemy IDs to prevent respawn.
-6. HUD & UI: Backed by lightweight ViewModels (`HudViewModel`, `MenuViewModel`, `GameViewModel`) to avoid coupling UI to raw ECS state.
+Requirements
+- Java: `JDK 17` (recommended; 11+ may work).
+- Build: `Gradle` (wrapper preferred) or `Maven` if project provides a pom.
+- Libraries (bundled via build tool):
+	- LibGDX (graphics, input, audio)
+	- Ashley (ECS)
+	- Tiled/TMX support
+	- Scene2D UI
 
-Directory Highlights
---------------------
-asset/        Asset descriptors & service abstraction.
-audio/        Audio playback and listener position management.
-component/    ECS components (pure data containers).
-system/       ECS systems handling logic (rendering, camera, animation, hazards, transitions...).
-screen/       LibGDX Screens (menu, game, pause, loading, death, save).
-ui/           Scene2D views + view models for HUD/Menu overlays.
-tiled/        Tiled map service + Ashley configurator (spawns and config from map objects).
-save/         SaveGame model (`SaveData`).
-util/         Utility helpers (e.g., pixel trimming for collider fitting).
+Project Structure (core highlights)
+- `asset/`: Asset types and `AssetService` (atlas, map, skin, sound, music).
+- `audio/`: `AudioService` for SFX/BGM and listener position.
+- `component/`: ECS components (data only): `Transform`, `Physics`, `Velocity`, `Collider`, `Player`, `Enemy`, `Life`, `Animation2D`, etc.
+- `system/`: ECS systems (logic): `PlayerSystem`, `EnemySystem`, `RenderSystem`, `CameraSystem`, `HazardSystem`, `LevelTransitionSystem`, `AnimatedTileSystem`, `InvulnerableSystem`, `InteractionSystem`, `DyingSystem`, `LifeSystem`, `DamagedSystem`, `NoGravityHudSystem`.
+- `tiled/`: `TiledService` and `TiledAshleyConfigurator` for map loading and entity setup.
+- `ui/model/` & `ui/view/`: MVVM HUD and menu views (`HudViewModel`, `HudView`, etc.).
+- `screen/`: Screens for menu/loading/pause/save/death.
+- `GameScreen.java`: Main gameplay orchestration.
+- `Lynguard.java`: Game bootstrap and shared services.
 
-Core Flow
----------
-1. Startup: `Lynguard.create()` sets up camera, viewport, batch, assets, audio and registers `LoadingScreen`.
-2. Loading: Assets queued / loaded; once ready, the game transitions to `MenuScreen` then `GameScreen`.
-3. Map Init: `GameScreen.initializeWorld()` wires a chain of consumers so a map load updates renderer, systems, audio, transitions and interactions in one place.
-4. Spawning:
-	- Player spawn is resolved via a Tiled layer named `PLAYER_SPAWN` plus a typed property (e.g. `player_spawn_level_0`).
-	- Enemies are spawned by scanning a layer (default `SLIMES`) and collapsing contiguous horizontal tile runs into patrol bounds.
-5. Runtime Loop: Systems update on `engine.update(delta)`; GameScreen manages input (pause, gravity toggle), HUD sync, auto‑save timer, and death detection.
-6. Level Transition: Clears non‑player entities, loads new map, resolves return or default spawn, re‑spawns player, respawns enemies (excluding dead IDs), triggers auto‑save.
-7. Saving: `createSaveData(slot)` snapshots current state; load reconstructs world, applies dead enemy sets, and restores player stats/inventory (keys).
+Installation
+1) Clone the repository.
+2) Ensure JDK 17 is active.
+3) If using Gradle wrapper, build once to fetch dependencies.
 
-Design Notes
-------------
-- Player collider uses `PixelTrimUtil` to approximate visual bounds (reducing “air hits”).
-- Enemy IDs are currently derived from integer world positions. This is sufficient for static maps; switch to UUIDs if dynamic spawning or layout changes are introduced.
-- Auto‑save runs every 60 seconds; consider also triggering on major events (boss defeat, level transition, key pickup).
-- `AssetService.load()` is synchronous (blocking). For heavier content, move to queued loads in a loading screen with progress.
-- The render pipeline interleaves tile layer draws with entity rendering guided by Transform.z. Optimization is possible if layering cost grows.
-
-Extending the Game
-------------------
-Add a System: Create a class in `system/` extending `EntitySystem` or `IteratingSystem` with a Family filter; register it in `GameScreen` after creation.
-Add a Component: Simple POJO implementing `Component`; add a static `ComponentMapper` for fast lookup.
-Add a New Map: Place TMX file, create `MapAsset` enum entry, and ensure spawn layers/properties follow existing conventions.
-Add Enemy Types: Add new atlas regions and a factory method (similar to `createEnemy`) with distinct AI/patrol config.
-
-Build & Run
------------
-This core source folder suggests a multi‑module LibGDX Gradle setup (standard LibGDX project layout). If a Gradle wrapper exists at repository root:
-
-Fish shell commands (adjust path/module names if different):
-```
-./gradlew --refresh-dependencies
-./gradlew desktop:run
+fish shell examples:
+```fish
+set -l JAVA_HOME (status --is-interactive; and echo $JAVA_HOME); or echo "Ensure JDK 17 installed"
+./gradlew tasks
+./gradlew build
 ```
 
-If using a single module:
-```
+Running
+- Desktop run via Gradle (LibGDX launcher entrypoint).
+```fish
 ./gradlew run
 ```
+- If a specific desktop launcher class is configured (e.g., `DesktopLauncher`), Gradle `application` plugin will use it automatically.
 
-To generate assets (if any packing task exists):
+Usage
+- Controls (from `GameScreen`):
+	- `ESC` opens pause screen.
+	- `C` toggles No-Gravity effect with cooldown.
+- Gameplay:
+	- Player spawns from Tiled map spawn layer.
+	- Enemies spawned from `SLIMES` layer, patrolling within contiguous tiles.
+	- Auto-save every 60 seconds via `MenuViewModel#autoSave()`.
+	- Death transitions to `DeathScreen` after `DyingSystem` removes the entity.
+
+Save/Load
+- `SaveData` persists: level name, player position, life/max life, keys, and dead enemies per level.
+- Load by calling `GameScreen#setSaveData(...)` before `show()` or via menu auto-load.
+
+Deployment
+- Desktop packaging (Gradle):
+```fish
+./gradlew distZip
+./gradlew distTar
 ```
-./gradlew texturePacker
-```
+- Artifacts under `build/distributions/` include start scripts for Linux/macOS/Windows.
+- For platform-specific bundles (e.g., LWJGL natives), ensure dependencies are correctly configured in Gradle.
+
+Development Notes
+- ECS separation: components are data-only; systems implement behavior.
+- Services are injected into systems/screens (`AssetService`, `AudioService`, `TiledService`).
+- UI follows MVVM: `View` subclasses bind to `ViewModel` properties.
+- Keep `GameScreen` orchestration light; push entity-specific logic to systems.
 
 Troubleshooting
----------------
-Black Screen: Verify assets actually load (enable LibGDX debug logging and check atlas paths).
-Missing Spawn: Ensure `PLAYER_SPAWN` layer contains at least one non‑empty cell with the correct property key.
-Enemies Not Clearing: Confirm enemy layer name matches expected (`SLIMES`) and layer tiles are not already null.
-Collider Mismatch: Re-run atlas generation or adjust trim margins in `PixelTrimUtil.computePadding(...)`.
+- Black screen or missing textures → verify atlases loaded via `AssetService.load(...)` and region names.
+- Spawn issues → check Tiled layers: `PLAYER_SPAWN`, `SLIMES`, map properties (e.g., `player_spawn_<level>`).
+- Audio position not updating → ensure `Transform` present and `AudioService.updateListenerPosition(...)` called.
 
-Future Improvements
--------------------
-1. Asynchronous asset loading with progress bar.
-2. Structured enemy data (JSON or Tiled object properties for stats/AI).
-3. Dedicated inventory & ability systems (reduce Player component responsibility).
-4. Event bus for decoupled HUD updates instead of polling each render.
-5. Save compression / versioning for forward compatibility.
-
-Contributing
-------------
-1. Keep components data-only.
-2. Avoid heavy logic inside Screens; prefer Systems.
-3. Use descriptive log tags (e.g. `GameScreen`, `PixelTrim`).
-4. Dispose any LibGDX resource you create (Texture, Stage, Renderer) in `dispose()`.
-
-License / Credits
------------------
-Internal educational project. Assets and third-party libraries (LibGDX, Ashley, FreeTypist) retain their original licenses; review before redistribution.
+License
+- Educational project; license terms per course guidelines.
 
