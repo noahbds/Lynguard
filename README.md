@@ -1,40 +1,77 @@
-# LIL7_GAME
+# Lil7 Lynguard Games — README
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+# Overview
+- 2D LibGDX game using Ashley ECS, Tiled maps, and a MVVM UI layer.
+- Core loop managed by `GameScreen`, with systems for player, enemies, rendering, camera, hazards, transitions, and HUD.
 
-This project was generated with a template including simple application launchers and a main class extending `Game` that sets the first screen.
+# Requirements
+- Java: `JDK 17` (recommended; 11+ may work).
+- Build: `Gradle` (wrapper preferred) or `Maven` if project provides a pom.
+- Libraries (bundled via build tool):
+	- LibGDX (graphics, input, audio)
+	- Ashley (ECS)
+	- Tiled/TMX support
 
-## Platforms
+# Project Structure (core highlights)
+- `asset/`: Asset types and `AssetService` (atlas, map, skin, sound, music).
+- `audio/`: `AudioService` for SFX/BGM and listener position.
+- `component/`: ECS components (data only): `Transform`, `Physics`, `Velocity`, `Collider`, `Player`, `Enemy`, `Life`, `Animation2D`, etc.
+- `system/`: ECS systems (logic): `PlayerSystem`, `EnemySystem`, `RenderSystem`, `CameraSystem`, `HazardSystem`, `LevelTransitionSystem`, `AnimatedTileSystem`, `InvulnerableSystem`, `InteractionSystem`, `DyingSystem`, `LifeSystem`, `DamagedSystem`, `NoGravityHudSystem`.
+- `tiled/`: `TiledService` and `TiledAshleyConfigurator` for map loading and entity setup.
+- `ui/model/` & `ui/view/`: MVVM HUD and menu views (`HudViewModel`, `HudView`, etc.).
+- `screen/`: Screens for menu/loading/pause/save/death.
+- `GameScreen.java`: Main gameplay orchestration.
+- `Lynguard.java`: Game bootstrap and shared services.
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+<img width="4096" height="1218" alt="uml" src="https://github.com/user-attachments/assets/fdeb975d-0ebd-4681-9d53-f2fcfb7aed2e" />
 
-## Gradle
+## Installation
+1) Clone the repository.
+2) Ensure JDK 17 is active.
+3) If using Gradle wrapper, build once to fetch dependencies.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+examples:
+```fish
+set -l JAVA_HOME (status --is-interactive; and echo $JAVA_HOME); or echo "Ensure JDK 17 installed"
+./gradlew tasks
+./gradlew build
+```
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+## Running
+- Desktop run via Gradle (LibGDX launcher entrypoint).
+```fish
+./gradlew run
+```
+- If a specific desktop launcher class is configured (e.g., `DesktopLauncher`), Gradle `application` plugin will use it automatically.
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+## Usage
+- Controls (from `GameScreen`):
+	- `ESC` opens pause screen.
+	- `C` toggles No-Gravity effect with cooldown.
+- Gameplay:
+	- Player spawns from Tiled map spawn layer.
+	- Enemies spawned from `SLIMES` layer, patrolling within contiguous tiles.
+	- Auto-save every 60 seconds via `MenuViewModel#autoSave()`.
+	- Death transitions to `DeathScreen` after `DyingSystem` removes the entity.
 
+Save/Load
+- `SaveData` persists: level name, player position, life/max life, keys, and dead enemies per level.
+- Load by calling `GameScreen#setSaveData(...)` before `show()` or via menu auto-load.
 
-## UML
+Deployment
+- Desktop packaging (Gradle):
+```fish
+./gradlew distZip
+./gradlew distTar
+```
+- Artifacts under `build/distributions/` include start scripts for Linux/macOS/Windows.
+- For platform-specific bundles (e.g., LWJGL natives), ensure dependencies are correctly configured in Gradle.
 
+## Troubleshooting
+- Black screen or missing textures → verify atlases loaded via `AssetService.load(...)` and region names.
+- Spawn issues → check Tiled layers: `PLAYER_SPAWN`, `SLIMES`, map properties (e.g., `player_spawn_<level>`).
+- Audio position not updating → ensure `Transform` present and `AudioService.updateListenerPosition(...)` called.
 
-<img width="4096" height="1218" alt="uml" src="https://github.com/user-attachments/assets/2f220507-7a39-472f-aeea-827773165fba" />
+License
+- Educational project; license terms per course guidelines.
 
