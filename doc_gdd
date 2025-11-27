@@ -1,0 +1,113 @@
+Lil7 Games — Game Design Document (GDD)
+
+Version
+- v1.0 — 2025-11-27
+
+Résumé (High Concept)
+- Jeu d’action/plateformes 2D réalisé avec LibGDX et un moteur ECS (Ashley).
+- Boucle de jeu: exploration de niveaux Tiled, affrontements contre des ennemis patrouilleurs, gestion de la vie, dash, effets spéciaux (anti-gravité), transitions de niveaux et HUD réactif (MVVM).
+- Objectif: proposer une expérience arcade lisible et extensible (systèmes ECS modulaires, services d’assets/audio, UI découplée).
+
+Piliers de Design
+- Lisibilité et contrôle: collisions précises, HUD clair (vie, dash, actions).
+- Modélisation par données: components = données pures; systems = comportements.
+- Extensibilité: ajout facile d’ennemis, de hazards et de mécaniques via de nouveaux components/systems.
+- Boucles courtes: combat simple, déplacements rapides, checkpoints/spawns déterministes.
+
+Public Cible
+- Joueurs aimant les jeux d’action 2D accessibles, avec mécaniques lisibles et progression par niveaux.
+
+Plateformes
+- Desktop (LWJGL via LibGDX). Autres plateformes possibles ultérieurement si configurées.
+
+Univers & Intention Narrative (bref)
+- Ton: aventure d’heroic-fantasy légère. Le joueur progresse dans des zones thématiques, collecte des clés et surmonte des dangers environnementaux.
+- Narration: environnementale et minimale (panneaux, objets, transitions de zones). Les systèmes actuels se concentrent sur gameplay; la narration peut être enrichie plus tard (quêtes, boss dédiés, journaux).
+
+Mécaniques Principales
+- Déplacements: contrôlés par le PlayerSystem (saut/course selon configuration du projet). Caméra suiveuse (CameraSystem).
+- Combat/Dégâts: `Life`, `Damaged`, `Invulnerable` gérés par `LifeSystem`, `DamagedSystem`, `InvulnerableSystem`.
+- Dash: `Dash` avec cooldown; intégré à la lecture HUD (disponible/chargement).
+- Anti-gravité: activation par `C` (voir `GameScreen`), effet temporaire `NoGravity` avec `NoGravityCooldown`. Un HUD dédié (`NoGravityHudSystem`) informe l’état.
+- Ennemis: slimes patrouillant entre bornes calculées depuis la couche Tiled `SLIMES` (contiguïté horizontale). Contact dangereux (via `HazardSystem`).
+- Collisions: colliders ajustés (PixelTrimUtil) pour le joueur; systèmes de collision de tuiles/objets selon configuration.
+- Transitions de niveaux: `LevelTransitionSystem` orchestre les changements; retour possible via propriétés Tiled (spawn retour).
+- Sauvegarde: `SaveData` persiste niveau, position, vie, clés du joueur, et ennemis morts par niveau. Auto-save toutes les 60s via `MenuViewModel#autoSave()`.
+
+Systèmes ECS (aperçu)
+- Components (données): `Transform`, `Physics`, `Velocity`, `Collider`, `Player`, `Enemy`, `Life`, `Facing`, `Flip`, `Animation2D`, `Patrol`, `Dash`, `Attack`, `Defense`, `Dying`, `NoGravity`, `NoGravityCooldown`, `Hazard`, `Invulnerable`.
+- Systems (comportements): `PlayerSystem`, `EnemySystem`, `HazardSystem`, `CameraSystem`, `LevelTransitionSystem`, `AnimationSystem`, `RenderSystem`, `InvulnerableSystem`, `InteractionSystem`, `AnimatedTileSystem`, `LifeSystem`, `DamagedSystem`, `DyingSystem`, `NoGravityHudSystem`.
+- Ordre d’update typique (réel code référent `GameScreen`): Player → Enemy → Hazard → Camera → LevelTransition → Animation → Render → Invulnerable → Interaction → Life → Damaged → Dying → AnimatedTile → NoGravityHUD.
+
+UI / UX
+- Architecture: MVVM (`ui/model/*` et `ui/view/*`).
+- HUD: affiche vie actuelle/max, état du dash (prêt/cooldown), et actions contextuelles (via `HudViewModel`).
+- Contrôles confirmés: `ESC` ouvre Pause; `C` bascule l’anti-gravité (si disponible). Les autres contrôles dépendent de la configuration du projet (PlayerSystem).
+
+Niveaux & Contenu (Tiled)
+- Couches/Propriétés:
+	- Spawn joueur: couche `PLAYER_SPAWN` avec propriété `player_spawn_<nom_du_niveau_en_minuscule>`.
+	- Spawn retour: propriété spécifique (ex: `return_*`) selon l’événement de transition.
+	- Ennemis: couche `SLIMES`; tuiles contiguës horizontales = zone de patrouille.
+- Assets: TextureAtlas `OBJECTS` pour sprites; fallback simple possible (pixmap) pour ennemis.
+
+Boucle de Jeu (frame)
+- `Screen` tick → Update des Systems (physique/IA/caméra/rendu) → Mise à jour ViewModels → HUD → Audio listener position sync → Auto-save périodique → Dessin UI.
+
+Progression
+- Par niveaux Tiled (ex: `LEVEL_0`, …). Clés collectées persistées. Ennemis tués mémorisés par niveau.
+- Mort du joueur: animation de mort via `Animation2D` puis suppression par `DyingSystem`, affichage `DeathScreen`.
+
+Direction Artistique (proposition)
+- Style: 2D pixel-art stylisé, lisible et contrasté.
+- Palette: tons naturels pour environnements, couleurs vives pour feedbacks (dégâts, dash prêt).
+- Animation: boucles courtes, feedback immédiat (clignotement invulnérable, effets de hit si ajoutés plus tard).
+
+Audio (proposition)
+- SFX: déplacements, dash, hits, mort, UI.
+- Musique: ambiances par niveau/zone.
+- Technique: `AudioService` gère lecture et position de l’écouteur (suivi joueur).
+
+Exigences Techniques
+- Java: JDK 17 recommandé.
+- Build: Gradle (wrapper) et dépendances LibGDX/Ashley/Tiled/Scene2D.
+- Performance: 60 FPS cible; clamp delta à 1/30s dans `GameScreen` pour stabilité.
+- Structure code: ECS (Ashley), services `AssetService`/`TiledService`/`AudioService`, UI MVVM (`View` abstraite + `ViewModel`).
+
+Pipeline & Outils
+- Tiled (.tmx) pour layout des niveaux et propriétés de spawn.
+- TexturePacker (via atlas LibGDX) pour sprites; `AtlasAsset` centralise l’accès.
+- Skin Scene2D pour UI (`SkinAsset`).
+
+Sauvegarde
+- Données: nom niveau, pos. joueur, vie/max vie, clés, ennemis tués par niveau.
+- Points d’intégration: `GameScreen#createSaveData(...)`, `GameScreen#loadSaveData(...)`.
+
+Risques & Contraintes
+- Collisions précises: nécessité d’ajuster colliders (PixelTrimUtil) selon sprites.
+- Dépendance aux propriétés Tiled correctes (spawns/retour/ennemis).
+- Gestion de l’ordre des Systems pour éviter des régressions (ex: update caméra après mouvement).
+
+Planification (exemple)
+- Milestone 1 — Vertical Slice: déplacement, une zone Tiled, un type d’ennemi, HUD vie/dash, décès/respawn, save basique.
+- Milestone 2 — Contenu: nouvelles zones, variations ennemis, hazards environnementaux supplémentaires.
+- Milestone 3 — Polish: VFX/UI, équilibrage, audio, options d’accessibilité.
+
+Accessibilité (pistes)
+- Options de remappage des touches.
+- Mode daltonien (contrastes renforcés), curseurs volume SFX/Musique.
+- Aides visuelles (icônes pour dash prêt, feedbacks de dégâts).
+
+Annexes (références code)
+- `GameScreen.java`: orchestration gameplay, spawns, transitions, autosave, HUD.
+- `system/*`: logique des features (voir liste ci-dessus).
+- `component/*`: données par entité (aucun comportement complexe).
+- `tiled/*`: chargement cartes, création entités.
+- `ui/*`: MVVM (Views et ViewModels).
+- `save/SaveData.java`: format de sauvegarde.
+
+Ouverts/À Décider
+- Contrôles exacts (mouvements/jump/dash) à documenter précisément suivant la configuration finale.
+- Boss et progression narrative (structure d’actes/chapitres, quêtes secondaires) à définir.
+- Équilibrage chiffré (dégâts, vitesses, cooldowns) à calibrer.
+
