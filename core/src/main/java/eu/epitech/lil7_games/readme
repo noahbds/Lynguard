@@ -1,0 +1,82 @@
+Lil7 Games — README
+
+Overview
+- 2D LibGDX game using Ashley ECS, Tiled maps, and a MVVM UI layer.
+- Core loop managed by `GameScreen`, with systems for player, enemies, rendering, camera, hazards, transitions, and HUD.
+
+Requirements
+- Java: `JDK 17` (recommended; 11+ may work).
+- Build: `Gradle` (wrapper preferred) or `Maven` if project provides a pom.
+- Libraries (bundled via build tool):
+	- LibGDX (graphics, input, audio)
+	- Ashley (ECS)
+	- Tiled/TMX support
+	- Scene2D UI
+
+Project Structure (core highlights)
+- `asset/`: Asset types and `AssetService` (atlas, map, skin, sound, music).
+- `audio/`: `AudioService` for SFX/BGM and listener position.
+- `component/`: ECS components (data only): `Transform`, `Physics`, `Velocity`, `Collider`, `Player`, `Enemy`, `Life`, `Animation2D`, etc.
+- `system/`: ECS systems (logic): `PlayerSystem`, `EnemySystem`, `RenderSystem`, `CameraSystem`, `HazardSystem`, `LevelTransitionSystem`, `AnimatedTileSystem`, `InvulnerableSystem`, `InteractionSystem`, `DyingSystem`, `LifeSystem`, `DamagedSystem`, `NoGravityHudSystem`.
+- `tiled/`: `TiledService` and `TiledAshleyConfigurator` for map loading and entity setup.
+- `ui/model/` & `ui/view/`: MVVM HUD and menu views (`HudViewModel`, `HudView`, etc.).
+- `screen/`: Screens for menu/loading/pause/save/death.
+- `GameScreen.java`: Main gameplay orchestration.
+- `Lynguard.java`: Game bootstrap and shared services.
+
+Installation
+1) Clone the repository.
+2) Ensure JDK 17 is active.
+3) If using Gradle wrapper, build once to fetch dependencies.
+
+fish shell examples:
+```fish
+set -l JAVA_HOME (status --is-interactive; and echo $JAVA_HOME); or echo "Ensure JDK 17 installed"
+./gradlew tasks
+./gradlew build
+```
+
+Running
+- Desktop run via Gradle (LibGDX launcher entrypoint).
+```fish
+./gradlew run
+```
+- If a specific desktop launcher class is configured (e.g., `DesktopLauncher`), Gradle `application` plugin will use it automatically.
+
+Usage
+- Controls (from `GameScreen`):
+	- `ESC` opens pause screen.
+	- `C` toggles No-Gravity effect with cooldown.
+- Gameplay:
+	- Player spawns from Tiled map spawn layer.
+	- Enemies spawned from `SLIMES` layer, patrolling within contiguous tiles.
+	- Auto-save every 60 seconds via `MenuViewModel#autoSave()`.
+	- Death transitions to `DeathScreen` after `DyingSystem` removes the entity.
+
+Save/Load
+- `SaveData` persists: level name, player position, life/max life, keys, and dead enemies per level.
+- Load by calling `GameScreen#setSaveData(...)` before `show()` or via menu auto-load.
+
+Deployment
+- Desktop packaging (Gradle):
+```fish
+./gradlew distZip
+./gradlew distTar
+```
+- Artifacts under `build/distributions/` include start scripts for Linux/macOS/Windows.
+- For platform-specific bundles (e.g., LWJGL natives), ensure dependencies are correctly configured in Gradle.
+
+Development Notes
+- ECS separation: components are data-only; systems implement behavior.
+- Services are injected into systems/screens (`AssetService`, `AudioService`, `TiledService`).
+- UI follows MVVM: `View` subclasses bind to `ViewModel` properties.
+- Keep `GameScreen` orchestration light; push entity-specific logic to systems.
+
+Troubleshooting
+- Black screen or missing textures → verify atlases loaded via `AssetService.load(...)` and region names.
+- Spawn issues → check Tiled layers: `PLAYER_SPAWN`, `SLIMES`, map properties (e.g., `player_spawn_<level>`).
+- Audio position not updating → ensure `Transform` present and `AudioService.updateListenerPosition(...)` called.
+
+License
+- Educational project; license terms per course guidelines.
+
